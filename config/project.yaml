@@ -1,4 +1,4 @@
-dateModified: 1557914204
+dateModified: 1571607787
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -307,13 +307,13 @@ siteGroups:
 sites:
   29077885-d696-4ee7-9a99-ea42e8f64311:
     siteGroup: e70939fb-8b55-4880-b361-6437b2756120
-    name: Craft
+    name: Portfolio
     handle: default
     language: en-GB
-    hasUrls: '1'
+    hasUrls: true
     baseUrl: $DEFAULT_SITE_URL
-    sortOrder: '1'
-    primary: '1'
+    sortOrder: 1
+    primary: true
 system:
   edition: pro
   name: Craft

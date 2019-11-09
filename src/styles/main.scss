@@ -21,9 +21,12 @@
 @import "objects/image";
 
 // Layouts
+@import "layouts/column";
 @import "layouts/form";
 
 // Components
+@import "components/hp-main";
+@import "components/sidenav";
 @import "components/skip-link";
 
 // Utilities

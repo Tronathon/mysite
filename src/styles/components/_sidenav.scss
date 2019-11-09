@@ -1,0 +1,15 @@
+.c-sidenav {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	padding: 0 rem(20);
+	flex-shrink: 0;
+}
+
+.c-sidenav__link {
+	color: $white;
+	text-decoration: none;
+	margin-bottom: rem(10);
+}

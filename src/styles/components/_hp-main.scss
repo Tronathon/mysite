@@ -1,0 +1,17 @@
+.c-main {
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	display: flex;
+	box-sizing: border-box;
+}
+
+.c-main__content {
+	flex-grow: 1;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	overflow-y: scroll;
+}

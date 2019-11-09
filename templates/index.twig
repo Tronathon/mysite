@@ -7,6 +7,15 @@
 
 {% block content %}
 	<main id="content">
-		<h1>{{ entry.title }}</h1>
+	<div class="c-main">
+		{% include "_includes/components/sidenav" %}
+			<div class="c-main__content l-column">
+				{% include "_includes/components/intro" %}
+				{% include "_includes/components/projects" %}
+				{% include "_includes/components/about" %}
+				{% include "_includes/components/contact" %}
+				{% include "_includes/components/clients" %}
+			</div
+		</div>
 	</main>
 {% endblock %}
