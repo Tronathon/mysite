@@ -9,10 +9,11 @@
 .c-main__content {
 	flex-grow: 1;
 	text-align: center;
-	justify-content: center;
+	justify-content: flex-start;
 	display: flex;
 	align-items: center;
 	overflow-y: scroll;
 	height: 100vh;
-	position: fixed;
+
+	// position: fixed;
 }

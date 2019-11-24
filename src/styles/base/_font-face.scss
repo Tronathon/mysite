@@ -12,20 +12,20 @@
 
 @font-face {
 	font-family: "Reitam Regular";
-	src: url("Reitam Regular.woff") format("woff");
+	src: url("../fonts/Reitam Regular.woff") format("woff");
 }
 
 @font-face {
 	font-family: "Roboto";
 	src:
-		url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+		url("../fonts/roboto-v20-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+		url("../fonts/roboto-v20-latin-regular.woff") format("woff"), /* Modern Browsers */
 }
 
 /* libre-baskerville-regular - latin */
 @font-face {
 	font-family: "Libre Baskerville";
 	src:
-		url('../fonts/libre-baskerville-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/libre-baskerville-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+		url("../fonts/libre-baskerville-v7-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+		url("../fonts/libre-baskerville-v7-latin-regular.woff") format("woff"), /* Modern Browsers */
 }
