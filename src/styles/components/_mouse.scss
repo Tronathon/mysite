@@ -5,10 +5,10 @@
 	background: rgb(255, 193, 251);
 	background:
 		linear-gradient(
-		90deg,
-		rgba(255, 193, 251, 1) 10%,
-		rgba(133, 205, 204, 1) 100%
-	);
+			90deg,
+			rgba(255, 193, 251, 1) 10%,
+			rgba(133, 205, 204, 1) 100%
+		);
 	height: rem(65);
 	width: rem(65);
 	transition: all 0.3s linear;
@@ -23,6 +23,7 @@
 .c-mouse.active {
 	background: transparent;
 	transform: scale(1.5);
+
 	// transition: all 0.3s linear;
 	pointer-events: none;
 	border: 1px solid $white;
@@ -36,30 +37,30 @@
 		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 		background:
 			linear-gradient(
-			45deg,
-			rgba(255, 193, 251, 1) 0%,
-			rgba(133, 205, 204, 1) 100%
-		);
+				45deg,
+				rgba(255, 193, 251, 1) 0%,
+				rgba(133, 205, 204, 1) 100%
+			);
 	}
 
 	50% {
 		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
 		background:
 			linear-gradient(
-			45deg,
-			rgba(255, 193, 251, 1) 0%,
-			rgba(133, 205, 204, 1) 100%
-		);
+				45deg,
+				rgba(255, 193, 251, 1) 0%,
+				rgba(133, 205, 204, 1) 100%
+			);
 	}
 
 	100% {
 		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 		background:
 			linear-gradient(
-			45deg,
-			rgba(255, 193, 251, 1) 0%,
-			rgba(133, 205, 204, 1) 100%
-		);
+				45deg,
+				rgba(255, 193, 251, 1) 0%,
+				rgba(133, 205, 204, 1) 100%
+			);
 	}
 }
 
