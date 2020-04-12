@@ -1,3 +1,5 @@
 .c-logo {
+	@include h1();
+	flex: 1;
 	margin-bottom: auto;
 }

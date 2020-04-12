@@ -1,4 +1,4 @@
-dateModified: 1571607787
+dateModified: 1575498204
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -77,6 +77,38 @@ fields:
       columnType: text
     fieldGroup: fb69239b-76a5-43f2-b59f-0adffcac83e7
     contentColumnType: text
+  3613b592-6597-4e94-b6da-b49e30f88473:
+    name: 'Homepage Intro'
+    handle: homepageIntro
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  10504143-7163-49a6-96ce-06f77d0df048:
+    name: 'Project Carousel'
+    handle: projectCarousel
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_projectcarousel}}'
+      localizeBlocks: false
+    contentColumnType: string
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
 matrixBlockTypes:
   b8cc71a5-3887-4789-a31a-c9b7b7960631:
     name: Text
@@ -250,6 +282,108 @@ matrixBlockTypes:
           localizeRelations: false
         fieldGroup: null
         contentColumnType: string
+  a7b599c2-fa29-4704-8ef2-33c7b2e70707:
+    field: 10504143-7163-49a6-96ce-06f77d0df048
+    name: Projects
+    handle: projects
+    sortOrder: 1
+    fields:
+      256808b1-f61c-4081-a2ef-c0cb61709a2e:
+        name: Image
+        handle: image
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: ''
+          defaultUploadLocationSource: 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:795e072f-98ce-4a14-ae63-4e3a4e5142ca'
+          singleUploadLocationSubpath: ''
+          restrictFiles: ''
+          allowedKinds: null
+          sources:
+            - 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+          source: null
+          targetSiteId: null
+          viewMode: large
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      1f310125-a251-4352-bfb5-30d2c1a184cf:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      4122a27e-05db-4838-afd8-958fb7767c5c:
+        name: Title
+        handle: projectTitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      34ce3eac-0792-4be2-8e63-d462824511ef:
+        name: Link
+        handle: projectLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      724e8887-ed70-4d73-8162-5e8ea58c9295:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              256808b1-f61c-4081-a2ef-c0cb61709a2e:
+                required: false
+                sortOrder: 1
+              1f310125-a251-4352-bfb5-30d2c1a184cf:
+                required: false
+                sortOrder: 2
+              4122a27e-05db-4838-afd8-958fb7767c5c:
+                required: false
+                sortOrder: 3
+              34ce3eac-0792-4be2-8e63-d462824511ef:
+                required: false
+                sortOrder: 4
 plugins:
   assetrev:
     schemaVersion: 1.0.0
@@ -278,9 +412,22 @@ sections:
         name: Homepage
         handle: homepage
         hasTitleField: false
-        titleLabel: null
+        titleLabel: ''
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+        fieldLayouts:
+          a9c0a852-718a-46c1-9c37-baabe4b25ce0:
+            tabs:
+              -
+                name: 'Section 1'
+                sortOrder: 1
+                fields:
+                  3613b592-6597-4e94-b6da-b49e30f88473:
+                    required: false
+                    sortOrder: 1
+                  10504143-7163-49a6-96ce-06f77d0df048:
+                    required: false
+                    sortOrder: 2
   9dc3c5ac-0e8f-4d8e-a51c-a7ac78891c7f:
     name: 'Page Not Found'
     handle: pageNotFound

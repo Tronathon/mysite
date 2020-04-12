@@ -1,0 +1,35 @@
+.c-project__items {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 0 rem(20);
+}
+
+.c-project__item {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.c-project__image {
+	margin-bottom: rem(10);
+	width: 58%;
+}
+
+.c-project__details {
+	width: 42%;
+	text-align: left;
+	margin-left: rem(20);
+	margin-bottom: rem(20);
+	justify-content: flex-end;
+	display: flex;
+	flex-direction: column;
+}
+
+.c-project__title {
+	text-align: left;
+}
+
+.c-project__text {
+	margin-top: auto;
+}

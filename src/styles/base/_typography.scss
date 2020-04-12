@@ -2,16 +2,55 @@
  * Typography
  */
 
+@mixin reitam($level) {
+	@include typography("reitam", $level);
+	font-family: sans-serif;
+
+	.fonts-loaded & {
+		font-family: "Reitam Regular", sans-serif;
+	}
+}
+
+@mixin libre($level) {
+	@include typography("libre", $level);
+	font-family: serif;
+
+	.fonts-loaded & {
+		font-family: "Libre Baskerville";
+	}
+}
+
+@mixin roboto($level) {
+	@include typography("roboto", $level);
+	font-family: sans-serif;
+
+	.fonts-loaded & {
+		font-family: "Roboto";
+	}
+}
+
+@mixin h1() {
+	@include reitam(6);
+}
+
+@mixin h2() {
+	@include libre(6);
+}
+
+@mixin body() {
+	@include roboto(1);
+}
+
 h1 {
-	font-family: "Reitam Regular";
+	@include h1();
 }
 
 h2 {
-	font-family: "Libre Baskerville";
+	@include h2();
 }
 
-h3 {
-	font-family: "Roboto";
+p {
+	@include body();
 }
 
 a {

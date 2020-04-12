@@ -6,10 +6,23 @@
 	height: 100vh;
 	padding: 0 rem(20);
 	flex-shrink: 0;
+	margin: 0 rem(40);
+}
+
+.c-sidenav__list {
+	flex: 1;
+	text-align: left;
+	margin-top: rem(60);
+}
+
+.c-sidenav__list li {
+	margin-bottom: rem(10);
+	transform: translateX(-20px);
 }
 
 .c-sidenav__link {
 	color: $white;
 	text-decoration: none;
-	margin: 0 rem(60) rem(10) rem(60);
+
+	@include body();
 }
