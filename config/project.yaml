@@ -1,4 +1,4 @@
-dateModified: 1575498204
+dateModified: 1586876383
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -84,14 +84,18 @@ fields:
     searchable: true
     translationMethod: none
     translationKeyFormat: null
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
     settings:
-      placeholder: ''
-      code: ''
-      multiline: ''
-      initialRows: '4'
-      charLimit: ''
+      redactorConfig: Standard.json
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
       columnType: text
+      availableVolumes: '*'
+      availableTransforms: '*'
     contentColumnType: text
     fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
   10504143-7163-49a6-96ce-06f77d0df048:
@@ -106,6 +110,21 @@ fields:
       minBlocks: ''
       maxBlocks: ''
       contentTable: '{{%matrixcontent_projectcarousel}}'
+      localizeBlocks: false
+    contentColumnType: string
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  4138491f-1d2f-498d-b54e-a145e38f55ac:
+    name: Clients
+    handle: clients
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_clients}}'
       localizeBlocks: false
     contentColumnType: string
     fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
@@ -384,6 +403,89 @@ matrixBlockTypes:
               34ce3eac-0792-4be2-8e63-d462824511ef:
                 required: false
                 sortOrder: 4
+  e20f51ff-05c2-40fd-ba0a-1581d08c05ae:
+    field: 4138491f-1d2f-498d-b54e-a145e38f55ac
+    name: clients
+    handle: clients
+    sortOrder: 1
+    fields:
+      9a281ccf-9f9e-4ed1-9c10-ddf0b5aecf17:
+        name: Image
+        handle: image
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: ''
+          defaultUploadLocationSource: 'volume:795e072f-98ce-4a14-ae63-4e3a4e5142ca'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:795e072f-98ce-4a14-ae63-4e3a4e5142ca'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources:
+            - 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+          source: null
+          targetSiteId: null
+          viewMode: large
+          limit: ''
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      cbe5593d-42df-4e3a-b1ad-a2ce77f55a10:
+        name: Title
+        handle: clientName
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      19d8a6fc-88b1-4d82-aef1-2cf81fb79299:
+        name: Alt
+        handle: alt
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      37d1190d-5ae4-4ca7-a892-9b1fa895a567:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              9a281ccf-9f9e-4ed1-9c10-ddf0b5aecf17:
+                required: false
+                sortOrder: 1
+              cbe5593d-42df-4e3a-b1ad-a2ce77f55a10:
+                required: false
+                sortOrder: 2
+              19d8a6fc-88b1-4d82-aef1-2cf81fb79299:
+                required: false
+                sortOrder: 3
 plugins:
   assetrev:
     schemaVersion: 1.0.0
@@ -425,9 +527,6 @@ sections:
                   3613b592-6597-4e94-b6da-b49e30f88473:
                     required: false
                     sortOrder: 1
-                  10504143-7163-49a6-96ce-06f77d0df048:
-                    required: false
-                    sortOrder: 2
   9dc3c5ac-0e8f-4d8e-a51c-a7ac78891c7f:
     name: 'Page Not Found'
     handle: pageNotFound
@@ -444,6 +543,106 @@ sections:
       4a8d5656-d418-4987-99e9-5219c2d65824:
         name: 'Page Not Found'
         handle: pageNotFound
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  bf3ad633-a719-4b1a-be57-0551c5441080:
+    name: Works
+    handle: works
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      29077885-d696-4ee7-9a99-ea42e8f64311:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: works
+        template: index
+    entryTypes:
+      8e56bb3d-52cb-4634-8281-88edd06fbf06:
+        name: Works
+        handle: works
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  6a276097-2605-473b-be0c-542bb510457b:
+    name: Clients
+    handle: clients
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      29077885-d696-4ee7-9a99-ea42e8f64311:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: clients
+        template: index
+    entryTypes:
+      eb2fd3f7-1819-44f7-b4c9-7332c5073489:
+        name: Clients
+        handle: clients
+        hasTitleField: false
+        titleLabel: ''
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+        fieldLayouts:
+          fcbae691-2ae6-41dd-b44d-065dfd789fc0:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  4138491f-1d2f-498d-b54e-a145e38f55ac:
+                    required: false
+                    sortOrder: 1
+              -
+                name: SEO
+                sortOrder: 2
+                fields:
+                  eabfed67-715e-4222-9e32-9bd51ac22471:
+                    required: false
+                    sortOrder: 1
+                  8cfd9379-c00e-49e6-88c5-e5394a3eaf7c:
+                    required: false
+                    sortOrder: 2
+  a4def8f6-3cd2-48c1-8885-680ea62e3089:
+    name: Contact
+    handle: contact
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      29077885-d696-4ee7-9a99-ea42e8f64311:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: contact
+        template: index
+    entryTypes:
+      a5b4476c-7538-4324-bf4a-d79801f75639:
+        name: Contact
+        handle: contact
+        hasTitleField: false
+        titleLabel: null
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+  472ea4e9-f023-4ed2-9e25-8194b3d7f44f:
+    name: About
+    handle: about
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      29077885-d696-4ee7-9a99-ea42e8f64311:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: about
+        template: index
+    entryTypes:
+      8bb4bb4e-05cd-406d-b1e6-6d90ce05577f:
+        name: About
+        handle: about
         hasTitleField: false
         titleLabel: null
         titleFormat: '{section.name|raw}'

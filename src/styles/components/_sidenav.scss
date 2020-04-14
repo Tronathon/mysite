@@ -4,7 +4,6 @@
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	padding: 0 rem(20);
 	flex-shrink: 0;
 	margin: 0 rem(40);
 }
@@ -13,11 +12,11 @@
 	flex: 1;
 	text-align: left;
 	margin-top: rem(60);
+	padding-left: rem(20);
 }
 
 .c-sidenav__list li {
-	margin-bottom: rem(10);
-	transform: translateX(-20px);
+	margin-bottom: rem(20);
 }
 
 .c-sidenav__link {

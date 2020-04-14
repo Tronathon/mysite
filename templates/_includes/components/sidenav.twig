@@ -1,17 +1,14 @@
 <nav class="c-sidenav l-column">
-	<div class="c-logo">AM</div>
-	<ul class="c-sidenav__list">
-		<li class="js-nav">
-			<a class="c-sidenav__link" href="">Work</a>
-		</li>
-		<li class="js-nav">
-			<a class="c-sidenav__link" href="">About</a>
-		</li>
-		<li class="js-nav">
-			<a class="c-sidenav__link" href="">Clients</a>
-		</li>
-		<li class="js-nav">
-			<a class="c-sidenav__link" href="">Contact</a>
-		</li>
+	<div class="c-logo">
+		<span>A</span>
+		<span>M</span>
+	</div>
+	<ul class="c-sidenav__list js-sidenav">
+		{% set entries = craft.entries.id('and, not 1, not 2') %}
+		{% for entry in entries %}
+			<li class="js-nav">
+				<a class="c-sidenav__link" href="{{ entry.url }}">{{ entry.title}}</a>
+			</li>
+		{% endfor %}
 	</ul>
 </nav>

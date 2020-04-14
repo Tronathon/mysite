@@ -1,4 +1,9 @@
 .c-intro {
 	@include h2();
 	max-width: rem(550);
+	text-align: left;
+
+	p {
+		margin-bottom: rem(20);
+	}
 }

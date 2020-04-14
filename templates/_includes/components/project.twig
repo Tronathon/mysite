@@ -1,7 +1,7 @@
 {% include "_includes/macros" %}
 
 <section
-	class="l-section">
+	class="l-section" id="work">
 	{# <h2>Selected works</h2> #}
 	<div class="c-project__items js-target">
 		{% for block in entry.projectCarousel %}
@@ -13,9 +13,9 @@
 						class="c-project__image">
 
 						{# {{ macro.image(image ?? null)[
-																								width: 100
-																							]
-																							}} #}
+																														width: 100
+																													]
+																													}} #}
 
 						<img src="{{ image.getUrl() }}"/>
 

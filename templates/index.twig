@@ -12,11 +12,19 @@
 			{% include "_includes/components/sidenav" %}
 
 			<div class="c-main__content l-column">
-				{% include "_includes/components/intro" %}
-				{% include "_includes/components/project" %}
-				{% include "_includes/components/about" %}
-				{% include "_includes/components/clients" %}
-				{% include "_includes/components/contact" %}
+
+				{% if craft.entries.id(1) %}
+					{% include "_includes/components/intro" %}
+				{% elseif craft.entries.id(15)%}
+					{% include "_includes/components/project" %}
+				{% elseif craft.entries.id(16)%}
+					{% include "_includes/components/clients" %}
+				{% elseif craft.entries.id(17)%}
+					{% include "_includes/components/contact" %}
+				{% elseif craft.entries.id(18)%}
+					{% include "_includes/components/about" %}
+				{% endif %}
+
 			</div>
 
 		</div>

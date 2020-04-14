@@ -1,3 +1,23 @@
-<section class="l-section js-target">
-	<p>Some clients</p>
+<section class="l-section js-target" id="clients">
+	{% set blocks = entry.clients.all() %}
+	{% if blocks|length %}
+		<ul class="c-client__logo-items">
+
+			{% for block in blocks %}
+				<li class="c-client__logo-item">
+
+					{% set image = block.image.one() %}
+					{% if image %}
+						<div>
+							<img src="{{ image.getUrl() }}" alt="{{ block.alt }}"/>
+						</div>
+					{% endif %}
+
+					<p>{{ block.clientName }}</p>
+
+				</li>
+			{% endfor %}
+
+		</ul>
+	{% endif %}
 </section

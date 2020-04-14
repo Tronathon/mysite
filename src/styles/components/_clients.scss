@@ -1,0 +1,11 @@
+.c-client__logo-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.c-client__logo-item {
+	max-width: rem(180);
+	width: 50%;
+}

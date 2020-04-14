@@ -2,4 +2,20 @@
 	@include h1();
 	flex: 1;
 	margin-bottom: auto;
+	font-size: 4.5rem;
+	width: 9.5rem;
+
+	@supports (-webkit-text-stroke: 1px $black) {
+		-webkit-text-stroke: 1px $white;
+		-webkit-text-fill-color: $black;
+	}
+
+	span {
+		width: 100%;
+		display: block;
+
+		&:last-of-type {
+			text-align: right;
+		}
+	}
 }
