@@ -15,9 +15,9 @@ const typefaces = {
 	Roboto: [
 		{ weight: 400, style: 'normal' },
 	],
-	// Libre: [
-	// 	{ weight: 400, style: 'normal' },
-	// ],
+	Libre: [
+		{ weight: 400, style: 'normal' },
+	],
 };
 
 export default function init() {
@@ -40,6 +40,8 @@ function loadFonts() {
 			fonts.push(loader.load(null, 5000));
 		});
 	});
+
+	console.log(fonts);
 
 	return Promise.all(fonts);
 }

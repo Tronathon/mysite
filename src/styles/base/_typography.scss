@@ -37,6 +37,9 @@
 	@include libre(6);
 }
 
+@mixin h3() {
+	@include libre(4);
+}
 @mixin body() {
 	@include roboto(1);
 }
@@ -55,11 +58,23 @@ p {
 
 a {
 	color: inherit;
+	cursor: none;
 }
 
 .typeset {
 	a {
-		text-decoration: underline;
+		text-decoration: none;
+		background: rgb(255, 193, 251);
+		background: linear-gradient(
+			90deg,
+			rgba(255, 193, 251, 1) 10%,
+			rgba(133, 205, 204, 1) 100%
+		);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-moz-background-clip: text;
+		-moz-text-fill-color: transparent;
+		background-size: 100%;
 	}
 
 	p,
@@ -84,5 +99,10 @@ a {
 
 	ul {
 		list-style-type: disc;
+	}
+
+	p {
+		@include h3();
+		font-weight: 400;
 	}
 }

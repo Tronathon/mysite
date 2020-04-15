@@ -3,6 +3,9 @@
 		<span>A</span>
 		<span>M</span>
 	</div>
+	<div class="c-sidenav__mobile js-mobile-nav">
+		<span></span>
+	</div>
 	<ul class="c-sidenav__list js-sidenav">
 		{% set entries = craft.entries.id('and, not 1, not 2') %}
 		{% for entry in entries %}
