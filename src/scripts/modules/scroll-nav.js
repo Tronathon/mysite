@@ -8,7 +8,7 @@
 
 // let observer = new IntersectionObserver(animateMenuItem, options);
 
-// let targets = document.querySelectorAll(".js-target");
+// let targets = document.querySelectorAll(".");
 
 // function animateMenuItem(entries, observer) {
 // 	entries.forEach(entry => {

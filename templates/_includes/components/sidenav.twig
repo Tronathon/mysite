@@ -10,7 +10,7 @@
 		{% set entries = craft.entries.id('and, not 1, not 2') %}
 		{% for entry in entries %}
 			<li class="js-nav">
-				<a class="c-sidenav__link" href="{{ entry.url }}">{{ entry.title}}</a>
+				<a class="c-sidenav__link {% if craft.app.request.getSegment(1) == entry.title %} active {% endif %}" href="{{ entry.url }}">{{ entry.title}}</a>
 			</li>
 		{% endfor %}
 	</ul>

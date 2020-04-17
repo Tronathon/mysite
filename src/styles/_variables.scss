@@ -5,7 +5,11 @@
 // Colors
 $white: #fff;
 $black: #000;
-
+$light-grey: rgba(238, 238, 238, 0.3);
+$blue: rgba(44, 173, 186, 1);
+$blue-overlay: rgba(44, 173, 186, 0.8);
+$pink: rgba(255, 173, 186, 1);
+$pink-overlay: rgba(255, 173, 186, 0.8);
 $body-background-color: $black;
 $body-color: $white;
 $placholder-image-color: #ececec;
@@ -39,8 +43,8 @@ $z-index-map: (
 
 $breakpoint-map: (
 	s: only screen and (min-width: 20em),
-	m: only screen and (min-width: 40em),
-	l: only screen and (min-width: 68em),
+	m: only screen and (min-width: 30em),
+	l: only screen and (min-width: 50em),
 );
 
 // Typography

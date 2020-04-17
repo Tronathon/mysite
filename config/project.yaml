@@ -1,4 +1,4 @@
-dateModified: 1586876383
+dateModified: 1587058726
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -99,8 +99,8 @@ fields:
     contentColumnType: text
     fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
   10504143-7163-49a6-96ce-06f77d0df048:
-    name: 'Project Carousel'
-    handle: projectCarousel
+    name: 'Project Grid'
+    handle: projectGrid
     instructions: ''
     searchable: true
     translationMethod: site
@@ -109,7 +109,7 @@ fields:
     settings:
       minBlocks: ''
       maxBlocks: ''
-      contentTable: '{{%matrixcontent_projectcarousel}}'
+      contentTable: '{{%matrixcontent_projectgrid}}'
       localizeBlocks: false
     contentColumnType: string
     fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
@@ -384,6 +384,23 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      6412fb71-d84e-4290-b519-0ae051ced9b3:
+        name: Subtitle
+        handle: subtitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       724e8887-ed70-4d73-8162-5e8ea58c9295:
         tabs:
@@ -403,6 +420,9 @@ matrixBlockTypes:
               34ce3eac-0792-4be2-8e63-d462824511ef:
                 required: false
                 sortOrder: 4
+              6412fb71-d84e-4290-b519-0ae051ced9b3:
+                required: false
+                sortOrder: 5
   e20f51ff-05c2-40fd-ba0a-1581d08c05ae:
     field: 4138491f-1d2f-498d-b54e-a145e38f55ac
     name: clients
@@ -564,9 +584,19 @@ sections:
         name: Works
         handle: works
         hasTitleField: false
-        titleLabel: null
+        titleLabel: ''
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+        fieldLayouts:
+          31aca56f-7893-4c74-8d3a-3d4dd786b395:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  10504143-7163-49a6-96ce-06f77d0df048:
+                    required: false
+                    sortOrder: 1
   6a276097-2605-473b-be0c-542bb510457b:
     name: Clients
     handle: clients
@@ -644,9 +674,19 @@ sections:
         name: About
         handle: about
         hasTitleField: false
-        titleLabel: null
+        titleLabel: ''
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+        fieldLayouts:
+          e4872927-32d1-4703-9f5e-c6415831aef7:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  3613b592-6597-4e94-b6da-b49e30f88473:
+                    required: false
+                    sortOrder: 1
 siteGroups:
   e70939fb-8b55-4880-b361-6437b2756120:
     name: Craft

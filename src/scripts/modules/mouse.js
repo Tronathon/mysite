@@ -12,19 +12,22 @@ function cursorLoc(event) {
 	mouse.style.top = `${top}px`;
 }
 
+
 links.forEach(link => {
 	link.addEventListener('mouseenter', mouseEnter);
 	link.addEventListener('mouseleave', mouseLeave);
 });
 
+
 function mouseEnter(e) {
-	mouse.classList.add('active');
-	e.target.style.color = 'rgb(255, 193, 251)';
-	e.target.style.textDecoration = 'underline';
+	if (window.innerWidth > 800) {
+		mouse.classList.add('active');
+	}
+	e.target.classList.add('active');
 }
 
 function mouseLeave(e) {
 	mouse.classList.remove('active');
 	e.target.style.color = '#fff';
-	e.target.style.textDecoration = 'none';
+	e.target.classList.remove('active');
 }

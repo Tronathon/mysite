@@ -11,14 +11,12 @@
 	justify-content: flex-start;
 	display: flex;
 	align-items: center;
-
-	// position: fixed;
 }
 
 @include media(l) {
 	.c-main {
 		height: 100%;
-		overflow: hidden;
+		// overflow: hidden;
 		margin: 0;
 		display: flex;
 		flex-direction: row;

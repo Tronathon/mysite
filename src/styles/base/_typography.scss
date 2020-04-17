@@ -14,6 +14,7 @@
 @mixin libre($level) {
 	@include typography("libre", $level);
 	font-family: serif;
+	font-weight: 700;
 
 	.fonts-loaded & {
 		font-family: "Libre Baskerville";
@@ -38,18 +39,37 @@
 }
 
 @mixin h3() {
-	@include libre(4);
+	@include libre(3);
+	@include media(l) {
+		@include libre(4);
+	}
 }
+
+@mixin h4() {
+	@include libre(1);
+	@include media(l) {
+		@include libre(2);
+	}
+}
+
 @mixin body() {
 	@include roboto(1);
 }
 
-h1 {
+.h1 {
 	@include h1();
 }
 
-h2 {
+.h2 {
 	@include h2();
+}
+
+.h3 {
+	@include h3();
+}
+
+.h4 {
+	@include h4();
 }
 
 p {
@@ -61,14 +81,18 @@ a {
 	cursor: none;
 }
 
+ul li {
+	@include body();
+}
+
 .typeset {
 	a {
 		text-decoration: none;
-		background: rgb(255, 193, 251);
+		background: $pink;
 		background: linear-gradient(
 			90deg,
-			rgba(255, 193, 251, 1) 10%,
-			rgba(133, 205, 204, 1) 100%
+			$pink 10%,
+			$blue 100%
 		);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;

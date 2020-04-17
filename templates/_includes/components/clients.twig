@@ -1,5 +1,6 @@
-<section class="l-section js-target" id="clients">
-	{% set blocks = entry.clients.all() %}
+<section class="l-section " id="clients">
+	<h2 class="h3">I'm proud to have collaborated with some great companies:</h2>
+	{% set blocks = entry.clients.all() ?? null %}
 	{% if blocks|length %}
 		<ul class="c-client__logo-items">
 

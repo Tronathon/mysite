@@ -2,33 +2,32 @@
 
 <section
 	class="l-section" id="work">
-	{# <h2>Selected works</h2> #}
-	<div class="c-project__items js-target">
-		{% for block in entry.projectCarousel %}
-			{% if block.type == 'projects' %}
+	{# <h2 class="h3">Selected works</h2> #}
+	<div class="c-project__items">
 
-				{% set image = block.image.first() %}
-				<div class="c-project__item">
-					<div
-						class="c-project__image">
+		{% for block in entry.projectGrid %}
+			<div class="c-project__item">
 
-						{# {{ macro.image(image ?? null)[
-																														width: 100
-																													]
-																													}} #}
+				{% if block.type == 'projects' %}
 
-						<img src="{{ image.getUrl() }}"/>
+					{% set image = block.image.first() %}
+					<div class="c-project__content">
+						<div class="c-project__image">
+							{% if image %}
+								<img src="{{ image.getUrl() }}"/>
+							{% endif %}
+						</div>
 
+						<div class="c-project__details">
+							<h3 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h3>
+							<h4 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h4>
+							<a class="c-project__text" href="{{ block.link }}">{{ block.text }}</a>
+						</div>
 					</div>
-					<div class="c-project__details">
-						<h3 class="h3 c-project__title">{{ block.projectTitle }}</h3>
-						<p>Lorem ipsum</p>
-						<p class="c-project__text">{{ block.text }}</p>
-					</div>
 
-				</div>
-			{% endif %}
+				{% endif %}
+			</div>
 		{% endfor %}
-	</div>
 
+	</div>
 </section>
