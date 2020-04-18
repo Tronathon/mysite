@@ -1,0 +1,33 @@
+{% extends "_layouts/standard" %}
+
+{% block content %}
+	<main id="content">
+		<div class="c-main">
+			{% include "_includes/components/sidenav" %}
+
+			<section class="l-section" id="project">
+				<article class="c-project__single-items">
+					<div class="c-project__single-images">
+						<div class="c-project__single-desktop-image">
+							{% set image = entry.desktopImage.one() ?? null %}
+							{% if image %}
+								<img src="{{ image.getUrl() }}">
+							{% endif %}
+						</div>
+						<div class="c-project__single-mobile-image">
+							{% set mobileImage = entry.mobileImage.one() ?? null %}
+							{% if mobileImage %}
+								<img src="{{ mobileImage.getUrl() }}">
+							{% endif %}
+						</div>
+					</div>
+					<div class="c-project__single-details">
+						<h2 class="h3">{{ entry.projectTitle }}</h2>
+						<h4 class="h4">{{ entry.projectSubtitle }}</h4>
+						<p>{{ entry.projectDetails }}</p>
+					</div>
+				</article>
+			</section>
+		</div>
+	</main>
+{% endblock %}

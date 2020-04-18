@@ -1,4 +1,4 @@
-dateModified: 1587058726
+dateModified: 1587233896
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -127,6 +127,127 @@ fields:
       contentTable: '{{%matrixcontent_clients}}'
       localizeBlocks: false
     contentColumnType: string
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  b6ea601a-7307-40de-9d1c-8a81b5f080b9:
+    name: 'Desktop Image'
+    handle: desktopImage
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:795e072f-98ce-4a14-ae63-4e3a4e5142ca'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - image
+      sources:
+        - 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+      source: null
+      targetSiteId: null
+      viewMode: large
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  85da2673-f234-4de4-a48f-a03a9ad4c6b3:
+    name: 'Mobile Image'
+    handle: mobileImage
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:795e072f-98ce-4a14-ae63-4e3a4e5142ca'
+      singleUploadLocationSubpath: ''
+      restrictFiles: ''
+      allowedKinds: null
+      sources:
+        - 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+      source: null
+      targetSiteId: null
+      viewMode: large
+      limit: ''
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  e109576f-7ffb-4a0c-aa3d-3b33b08b1186:
+    name: 'Project Title'
+    handle: projectTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  deb72a2d-5346-4d6c-8fc2-4bde1058121c:
+    name: 'Project Subtitle'
+    handle: projectSubtitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  e1a53f05-3f70-4b31-8831-55278b50b718:
+    name: 'Project Details'
+    handle: projectDetails
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
+  e21ad41d-5a5d-47ab-8b5c-4df2c13fbf1f:
+    name: 'Project Link'
+    handle: projectLink
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
     fieldGroup: 059578ee-ad91-4430-b467-c870d8cf1579
 matrixBlockTypes:
   b8cc71a5-3887-4789-a31a-c9b7b7960631:
@@ -687,6 +808,54 @@ sections:
                   3613b592-6597-4e94-b6da-b49e30f88473:
                     required: false
                     sortOrder: 1
+  3ff98ff3-cc9f-4fe1-a32f-9aa58e8d8797:
+    name: Project
+    handle: project
+    type: structure
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      29077885-d696-4ee7-9a99-ea42e8f64311:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'works/{slug}'
+        template: projects/project
+    structure:
+      uid: cbf272c5-2f6a-4296-9c64-5b5a6d3f819c
+      maxLevels: null
+    entryTypes:
+      751138b1-9a09-4608-85e6-8bad63d24573:
+        name: Project
+        handle: project
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          2cbf0ef2-7adf-4462-845a-08dc617d91ea:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  e21ad41d-5a5d-47ab-8b5c-4df2c13fbf1f:
+                    required: false
+                    sortOrder: 1
+                  deb72a2d-5346-4d6c-8fc2-4bde1058121c:
+                    required: false
+                    sortOrder: 2
+                  e109576f-7ffb-4a0c-aa3d-3b33b08b1186:
+                    required: false
+                    sortOrder: 3
+                  e1a53f05-3f70-4b31-8831-55278b50b718:
+                    required: false
+                    sortOrder: 4
+                  b6ea601a-7307-40de-9d1c-8a81b5f080b9:
+                    required: false
+                    sortOrder: 5
+                  85da2673-f234-4de4-a48f-a03a9ad4c6b3:
+                    required: false
+                    sortOrder: 6
 siteGroups:
   e70939fb-8b55-4880-b361-6437b2756120:
     name: Craft
