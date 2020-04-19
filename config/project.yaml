@@ -1,4 +1,4 @@
-dateModified: 1587233896
+dateModified: 1587318508
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -493,17 +493,18 @@ matrixBlockTypes:
         handle: projectLink
         instructions: ''
         searchable: true
-        translationMethod: none
+        translationMethod: site
         translationKeyFormat: null
-        type: craft\fields\PlainText
+        type: craft\fields\Entries
         settings:
-          placeholder: ''
-          code: ''
-          multiline: ''
-          initialRows: '4'
-          charLimit: ''
-          columnType: text
-        contentColumnType: text
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: null
+          limit: ''
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
         fieldGroup: null
       6412fb71-d84e-4290-b519-0ae051ced9b3:
         name: Subtitle

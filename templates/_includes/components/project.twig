@@ -21,7 +21,10 @@
 						<div class="c-project__details">
 							<h3 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h3>
 							<h4 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h4>
-							<a class="c-project__text" href="{{ block.link }}">{{ block.text }}</a>
+							{% set url = block.projectLink.one() %}
+							{% if url %}
+								<a class="c-project__text" href="{{ url.url }}">{{ block.text }}</a>
+							{% endif %}
 						</div>
 					</div>
 

@@ -56,6 +56,10 @@
 	@include roboto(1);
 }
 
+@mixin body-serif() {
+	@include libre(1);
+}
+
 .h1 {
 	@include h1();
 }

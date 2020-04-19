@@ -3,9 +3,19 @@
 	text-align: left;
 }
 
+.c-about__copy {
+	border-bottom: 1px dotted $white;
+}
+
 .c-about__tools {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1;
-	text-align: center;
+	text-align: left;
+	padding-bottom: rem(40);
+}
+
+.c-about__listing li {
+	@include body-serif();
+	padding-bottom: rem(4);
 }

@@ -22,9 +22,12 @@
 						</div>
 					</div>
 					<div class="c-project__single-details">
-						<h2 class="h3">{{ entry.projectTitle }}</h2>
+						<h2 class="h3 u-mb-1">{{ entry.projectTitle }}</h2>
 						<h4 class="h4">{{ entry.projectSubtitle }}</h4>
-						<p>{{ entry.projectDetails }}</p>
+						<span class="c-project__single-link">
+							<a href="{{ entry.projectLink }}">Visit</a>
+						</span>
+						<p class="c-project__single-details-copy">{{ entry.projectDetails }}</p>
 					</div>
 				</article>
 			</section>
