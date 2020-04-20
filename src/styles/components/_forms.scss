@@ -1,0 +1,20 @@
+#SecretTrap {
+	display: none;
+}
+
+.c-form {
+	h3 {
+		text-align: left;
+		margin-bottom: rem(10);
+	}
+	input,
+	textarea {
+		width: 100%;
+		margin-bottom: rem(20);
+	}
+
+	input {
+		border: 0;
+		height: rem(28);
+	}
+}

@@ -1,4 +1,4 @@
-dateModified: 1587318508
+dateModified: 1587389318
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -638,6 +638,22 @@ plugins:
   redactor:
     schemaVersion: 2.3.0
     enabled: true
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      toEmail: anthony.j.mooney@gmail.com
+      prependSender: 'On behalf of'
+      prependSubject: 'Thanks for getting in touch'
+      allowAttachments: ''
+      successFlashMessage: 'Your message has been sent.'
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      honeypotParam: SecretTrap
 sections:
   de7026b1-fc54-49fa-93ab-9759b3c72110:
     name: Homepage
@@ -857,6 +873,26 @@ sections:
                   85da2673-f234-4de4-a48f-a03a9ad4c6b3:
                     required: false
                     sortOrder: 6
+  e2cb5720-94ac-42ce-a18d-c83668e851af:
+    name: Thanks
+    handle: thanks
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      29077885-d696-4ee7-9a99-ea42e8f64311:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: thanks
+        template: thanks
+    entryTypes:
+      7167a096-006d-4295-9483-3818ab28f41d:
+        name: Thanks
+        handle: thanks
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: null
+        sortOrder: 1
 siteGroups:
   e70939fb-8b55-4880-b361-6437b2756120:
     name: Craft

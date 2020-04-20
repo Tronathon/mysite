@@ -1,4 +1,4 @@
-{% include "_includes/macros" %}
+{% import '_includes/macros' as macros %}
 
 <section
 	class="l-section" id="work">
@@ -10,11 +10,14 @@
 
 				{% if block.type == 'projects' %}
 
-					{% set image = block.image.first() %}
+					{% set image = block.image.one() %}
+					{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
 					<div class="c-project__content">
 						<div class="c-project__image">
 							{% if image %}
-								<img src="{{ image.getUrl() }}"/>
+								<img
+								src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
+							{# <img src="{{ image.getUrl() }}"/> #}
 							{% endif %}
 						</div>
 

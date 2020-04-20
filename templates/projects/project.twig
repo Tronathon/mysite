@@ -1,3 +1,5 @@
+{% import '_includes/macros' as macros %}
+
 {% extends "_layouts/standard" %}
 
 {% block content %}
@@ -10,8 +12,9 @@
 					<div class="c-project__single-images">
 						<div class="c-project__single-desktop-image">
 							{% set image = entry.desktopImage.one() ?? null %}
+							{% set srcset = craft.image.srcset(image, [420,480,650,800]) %}
 							{% if image %}
-								<img src="{{ image.getUrl() }}">
+								<img src="{{ image.getUrl({width: 800}) }}" srcset="{{ srcset }}" sizes="(min-width: 50em) 50vw, 100vw" alt="{{ image.alt }}">
 							{% endif %}
 						</div>
 						<div class="c-project__single-mobile-image">
