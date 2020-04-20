@@ -1,5 +1,6 @@
 const mouse = document.querySelector('.js-mouse');
 const links = Array.from(document.getElementsByTagName('a'));
+const inputs = Array.from(document.getElementsByTagName('input'));
 const sideNav = document.querySelector('.js-sidenav')
 
 window.addEventListener('mousemove', cursorLoc);
@@ -16,6 +17,11 @@ function cursorLoc(event) {
 links.forEach(link => {
 	link.addEventListener('mouseenter', mouseEnter);
 	link.addEventListener('mouseleave', mouseLeave);
+});
+
+inputs.forEach(input => {
+	input.addEventListener('mouseenter', mouseEnter);
+	input.addEventListener('mouseleave', mouseLeave);
 });
 
 

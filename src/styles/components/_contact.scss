@@ -1,0 +1,19 @@
+.c-contact {
+	width: 100%;
+
+	@include media(l) {
+		width: 85%;
+		margin: auto;
+	}
+}
+
+.c-contact__header {
+	text-align: left;
+	margin-bottom: rem(40);
+}
+
+.c-contact__intro {
+	@include body-serif();
+	text-align: left;
+	margin-bottom: rem(40);
+}

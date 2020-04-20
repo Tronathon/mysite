@@ -7,7 +7,7 @@
 		<span></span>
 	</div>
 	<ul class="c-sidenav__list js-sidenav">
-		{% set entries = craft.entries.id('and, not 1, not 2, not 31') %}
+		{% set entries = craft.entries.id('and, not 1, not 2, not 31, not 32') %}
 		{% for entry in entries %}
 			<li class="js-nav">
 				<a class="c-sidenav__link {% if craft.app.request.getSegment(1) == entry.title %} active {% endif %}" href="{{ entry.url }}">{{ entry.title}}</a>

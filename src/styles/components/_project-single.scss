@@ -63,7 +63,7 @@
 .c-project__single-desktop-image:after {
 	display: block;
 	content: '';
-	border-bottom: 28px solid $white;
+	border-bottom: 28px solid $pink-overlay;
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	height: 0;
@@ -90,7 +90,8 @@
 	display: block;
 	content: '';
 	border-radius: 50%;
-	border: 1px solid $white;
+	// border: 1px solid $blue-overlay;
+	background: $blue-overlay;
 	position: absolute;
 	bottom: rem(10);
 	left: 50%;
@@ -122,4 +123,8 @@
 		width: 24%;
 		min-width: rem(150);
 	}
+
+	// .c-project__single-details-copy {
+	// 	max-width: rem(440);
+	// }
 }
