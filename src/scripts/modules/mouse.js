@@ -1,7 +1,6 @@
 const mouse = document.querySelector('.js-mouse');
 const links = Array.from(document.getElementsByTagName('a'));
 const inputs = Array.from(document.getElementsByTagName('input'));
-const sideNav = document.querySelector('.js-sidenav')
 
 window.addEventListener('mousemove', cursorLoc);
 
@@ -19,6 +18,7 @@ links.forEach(link => {
 	link.addEventListener('mouseleave', mouseLeave);
 });
 
+
 inputs.forEach(input => {
 	input.addEventListener('mouseenter', mouseEnter);
 	input.addEventListener('mouseleave', mouseLeave);
@@ -29,7 +29,9 @@ function mouseEnter(e) {
 	if (window.innerWidth > 800) {
 		mouse.classList.add('active');
 	}
-	e.target.classList.add('active');
+	// if (e.target != logo) {
+	// 	e.target.classList.add('active');
+	// }
 }
 
 function mouseLeave(e) {

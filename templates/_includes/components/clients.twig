@@ -1,24 +1,25 @@
 <section class="l-section " id="clients">
-	<h2 class="h3">I'm proud to have collaborated with some great companies:</h2>
-	{% set blocks = entry.clients.all() ?? null %}
-	{% if blocks|length %}
-		<ul class="c-client__logo-items">
+	<div class="c-client">
+		<h2 class="h3">I'm proud to have collaborated with some great companies:</h2>
 
-			{% for block in blocks %}
-				<li class="c-client__logo-item">
+		{% set blocks = entry.clients.all() ?? null %}
+		{% if blocks|length %}
+			<ul class="c-client__logo-items">
 
-					{% set image = block.image.one() %}
-					{% if image %}
-						<div>
-							<img src="{{ image.getUrl() }}" alt="{{ block.alt }}"/>
-						</div>
-					{% endif %}
+				{% for block in blocks %}
+					<li class="c-client__logo-item">
 
-					<p>{{ block.clientName }}</p>
+						{% set image = block.image.one() %}
+						{% if image %}
+							<div>
+								<img src="{{ image.getUrl() }}" alt="{{ block.alt }}"/>
+							</div>
+						{% endif %}
 
-				</li>
-			{% endfor %}
+					</li>
+				{% endfor %}
 
-		</ul>
-	{% endif %}
+			</ul>
+		{% endif %}
+	</div>
 </section

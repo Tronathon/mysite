@@ -1,4 +1,4 @@
-dateModified: 1587389318
+dateModified: 1587581677
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -792,9 +792,19 @@ sections:
         name: Contact
         handle: contact
         hasTitleField: false
-        titleLabel: null
+        titleLabel: ''
         titleFormat: '{section.name|raw}'
         sortOrder: 1
+        fieldLayouts:
+          9f34e43c-1044-4219-8184-f5ff9b14fb5f:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  3613b592-6597-4e94-b6da-b49e30f88473:
+                    required: false
+                    sortOrder: 1
   472ea4e9-f023-4ed2-9e25-8194b3d7f44f:
     name: About
     handle: about

@@ -1,5 +1,5 @@
 <nav class="c-sidenav l-column">
-	<a class="c-logo" href="/">
+	<a class="c-logo js-logo" href="/">
 		<span>A</span>
 		<span>M</span>
 	</a>
@@ -7,9 +7,9 @@
 		<span></span>
 	</div>
 	<ul class="c-sidenav__list js-sidenav">
-		{% set entries = craft.entries.id('and, not 1, not 2, not 31, not 32') %}
+		{% set entries = craft.entries.id('and, not 1, not 2, not 31, not 32, not 33, not 34, not 35') %}
 		{% for entry in entries %}
-			<li class="js-nav">
+			<li class="c-sidenav__list__item js-nav">
 				<a class="c-sidenav__link {% if craft.app.request.getSegment(1) == entry.title %} active {% endif %}" href="{{ entry.url }}">{{ entry.title}}</a>
 			</li>
 		{% endfor %}

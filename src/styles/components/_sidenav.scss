@@ -23,8 +23,18 @@
 .c-sidenav__link {
 	color: $white;
 	text-decoration: none;
+	padding-bottom: rem(10);
+	// display: inline-block;
 
 	@include body();
+}
+
+// .c-sidenav__list__item {
+// 	display: inline-block;
+// }
+
+.c-sidenav__list__item:hover {
+	border-bottom: 1px solid $white;
 }
 
 .c-sidenav__mobile {
@@ -49,11 +59,10 @@
 		cursor: none;
 		border-radius: 50%;
 	}
-
 }
 
-.c-sidenav__mobile:before,
-.c-sidenav__mobile:after {
+.c-sidenav__mobile::before,
+.c-sidenav__mobile::after {
 	display: inline-block;
 	content: '';
 	margin: 0 rem(16);

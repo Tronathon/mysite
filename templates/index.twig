@@ -14,6 +14,7 @@
 			<div class="c-main__content l-column">
 
 				{% if craft.app.request.getSegment(1) == '' %}
+					{% include "_includes/components/intro-animation" %}
 					{% include "_includes/components/intro" %}
 				{% endif %}
 
