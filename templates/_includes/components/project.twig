@@ -13,21 +13,35 @@
 					{% set image = block.image.one() %}
 					{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
 					<div class="c-project__content">
-						<div class="c-project__image">
-							{% if image %}
-								<img
-								src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
-							{# <img src="{{ image.getUrl() }}"/> #}
-							{% endif %}
+						<div class="c-project__content-left">
+							<div class="c-project__content-title">
+								<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
+								<h3 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h3>
+							</div>
+							<div class="c-project__content-main-image">
+								{% if image %}
+									<img
+									src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
+								{# <img src="{{ image.getUrl() }}"/> #}
+								{% endif %}
+							</div>
 						</div>
-
-						<div class="c-project__details">
-							<h3 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h3>
-							<h4 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h4>
-							{% set url = block.projectLink.one() %}
-							{% if url %}
-								<a class="c-project__text" href="{{ url.url }}">{{ block.text }}</a>
-							{% endif %}
+						<div class="c-project__content-right">
+							<div class="c-project__content-supporting">
+								<div class="c-project__content-supporting-image">
+									{% if image %}
+										<img
+										src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
+									{# <img src="{{ image.getUrl() }}"/> #}
+									{% endif %}
+								</div>
+							</div>
+							<div class="c-project__link">
+								{% set url = block.projectLink.one() %}
+								{% if url %}
+									<a href="{{ url.url }}">{{ block.text }}</a>
+								{% endif %}
+							</div>
 						</div>
 					</div>
 

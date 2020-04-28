@@ -1,78 +1,66 @@
 .c-project__items {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	padding: 0 rem(20);
 	width: 100%;
-	margin: auto;
+	max-width: 60rem;
+	margin: 0 auto;
+
 }
 
 .c-project__content {
-	position: relative;
-}
-
-.c-project__image {
-	margin-bottom: rem(20);
-	max-width: rem(800);
-	overflow: hidden;
-
-	img {
-		width: 100%;
-		object-fit: cover;
-		transition: all .2s ease-in-out;
-	}
-}
-
-.c-project__image:after {
-	background-color: $blue-overlay;
-	display: block;
-	z-index: 10;
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.c-project__item:nth-of-type(2n) {
-	.c-project__image:after  {
-		background-color: $pink-overlay;
-	}
-}
-
-.c-project__item:hover {
-	.c-project__image img {
-		transform: scale(1.1)
-	}
-}
-
-.c-project__details {
-	justify-content: center;
-	align-items: center;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	z-index: 20;
-	position: absolute;
-	transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
 }
 
-.c-project__title {
+.c-project__content-left,
+.c-project__content-right {
+	display: flex;
+	flex-direction: row;
+	place-items: center;
+}
+
+.c-project__content-title {
+	width: 100%;
 	text-align: center;
+	padding: rem(40) 0;
 }
 
-.c-project__text {
+.c-project__content-supporting {
+	width: 25%;
+	box-sizing: border-box;
+	border-left: 1px solid $white;
+	position: relative;
+	display: flex;
+	height: rem(300);
+	margin-left: auto;
+}
+
+.c-project__content-supporting-image {
+	padding: 0 0 rem(40) rem(40);
 	margin-top: auto;
-	@include body();
-	font-size: rem(12);
-	text-decoration: none;
 }
 
-@include media(l) {
-	.c-project__items {
-		padding: 0 rem(20);
-		margin: auto;
+.c-project__content-main-image {
+	width: 100%;
+}
+
+.c-project__link {
+	transform-origin: 0 bottom;
+	transform: rotate(90deg);
+	display: flex;
+	// margin-top: rem(10);
+	margin-bottom: auto;
+	width: 50%;
+
+	a {
+		@include body();
+		font-size: rem(12);
+		text-decoration: none;
 	}
+}
+
+.c-project__link:after {
+	display: block;
+	border-bottom: 1px solid $white;
+	content: '';
+	width: rem(30);
 }

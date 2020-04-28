@@ -1,6 +1,11 @@
 .c-about {
+	width: 100%;
 	max-width: 48rem;
 	text-align: left;
+
+	@include media(l) {
+		width: 185%;
+	}
 }
 
 .c-about__copy {

@@ -24,17 +24,17 @@
 	color: $white;
 	text-decoration: none;
 	padding-bottom: rem(10);
-	// display: inline-block;
 
 	@include body();
 }
 
-// .c-sidenav__list__item {
-// 	display: inline-block;
-// }
-
 .c-sidenav__list__item:hover {
-	border-bottom: 1px solid $white;
+	.c-sidenav__link:after{
+		display: inline-block;
+		border-bottom: 1px solid $white;
+		content: '';
+	}
+
 }
 
 .c-sidenav__mobile {
