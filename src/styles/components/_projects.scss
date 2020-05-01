@@ -1,6 +1,6 @@
 .c-project__items {
 	width: 100%;
-	max-width: 60rem;
+	max-width: 48rem;
 	margin: 0 auto;
 
 }
@@ -22,6 +22,7 @@
 	width: 100%;
 	text-align: center;
 	padding: rem(40) 0;
+	z-index: 10;
 }
 
 .c-project__content-supporting {
@@ -30,17 +31,32 @@
 	border-left: 1px solid $white;
 	position: relative;
 	display: flex;
-	height: rem(300);
+	height: rem(320);
 	margin-left: auto;
 }
 
 .c-project__content-supporting-image {
-	padding: 0 0 rem(40) rem(40);
-	margin-top: auto;
+	margin: auto 0 rem(30) rem(30);
+	@include ratio(2,1.35);
+	width: 100%;
+
+	img {
+
+		@supports(object-fit: cover) {
+			object-fit: cover;
+		}
+	}
 }
 
 .c-project__content-main-image {
+	@include ratio(2,1);
 	width: 100%;
+
+	img {
+		@supports(object-fit: cover) {
+			object-fit: cover;
+		}
+	}
 }
 
 .c-project__link {
@@ -63,4 +79,49 @@
 	border-bottom: 1px solid $white;
 	content: '';
 	width: rem(30);
+}
+
+.c-project__link--even {
+	margin-bottom: 0;
+	margin-top: rem(-100);
+}
+
+.c-project__content-main-image-even {
+	width: 90%;
+	margin-right: auto;
+	@include ratio(3,2);
+
+	img {
+		@supports(object-fit: cover) {
+			object-fit: cover;
+		}
+	}
+}
+
+.c-project__content-supporting-even {
+	display: flex;
+	align-items: center;
+}
+
+.c-project__content-supporting-image-even {
+	width: 50%;
+	margin: rem(20);
+	@include ratio(2,1.35);
+	// width: 100%;
+}
+
+.c-project__content-title-even {
+	margin-top: rem(-85);
+	padding-bottom: 0;
+	z-index: 10;
+}
+
+.c-project__content-title-even:after {
+	display: block;
+	height: rem(300);
+	content: '';
+	width: 50%;
+	margin-right: auto;
+	box-sizing: border-box;
+	border-right: 1px solid $white;
 }

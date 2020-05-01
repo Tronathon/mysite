@@ -2,7 +2,7 @@
 	width: 100%;
 
 	@include media(l) {
-		width: 85%;
+		// width: 85%;
 		margin: 0 auto;
 		max-width: 48rem;
 	}

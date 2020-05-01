@@ -1,52 +1,89 @@
 {% import '_includes/macros' as macros %}
 
-<section
-	class="l-section" id="work">
-	{# <h2 class="h3">Selected works</h2> #}
+<section class="l-section" id="work">
+	<h2 class="h3">Selected works</h2>
 	<div class="c-project__items">
 
 		{% for block in entry.projectGrid %}
-			<div class="c-project__item">
+			{% if loop.index is odd %}
+				<div class="c-project__item">
 
-				{% if block.type == 'projects' %}
+					{% if block.type == 'projects' %}
 
-					{% set image = block.image.one() %}
-					{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
-					<div class="c-project__content">
-						<div class="c-project__content-left">
-							<div class="c-project__content-title">
-								<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
-								<h3 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h3>
-							</div>
-							<div class="c-project__content-main-image">
-								{% if image %}
-									<img
-									src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
-								{# <img src="{{ image.getUrl() }}"/> #}
-								{% endif %}
-							</div>
-						</div>
-						<div class="c-project__content-right">
-							<div class="c-project__content-supporting">
-								<div class="c-project__content-supporting-image">
+						{% set image = block.image.one() %}
+						<div class="c-project__content">
+							<div class="c-project__content-left">
+								<div class="c-project__content-title">
+									<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
+									<h3 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h3>
+								</div>
+								<div class="c-project__content-main-image u-mb-2">
 									{% if image %}
-										<img
-										src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
-									{# <img src="{{ image.getUrl() }}"/> #}
+										{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
+										<img src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
 									{% endif %}
 								</div>
 							</div>
-							<div class="c-project__link">
-								{% set url = block.projectLink.one() %}
-								{% if url %}
-									<a href="{{ url.url }}">{{ block.text }}</a>
-								{% endif %}
+							<div class="c-project__content-right">
+								<div class="c-project__content-supporting">
+									<div class="c-project__content-supporting-image">
+										{% set secondimage = block.secondaryImage.one() %}
+										<div>{{ secondimage }}</div>
+										{% if secondimage %}
+											{% set secondSrcset = craft.image.srcset(secondimage, [420,480,650,960]) %}
+											<img src="{{ secondimage.getUrl({width: 960}) }}" srcset="{{ secondSrcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ secondimage.alt }}">
+										{% endif %}
+									</div>
+								</div>
+								<div class="c-project__link">
+									{% set url = block.projectLink.one() %}
+									{% if url %}
+										<a href="{{ url.url }}">{{ block.text }}</a>
+									{% endif %}
+								</div>
 							</div>
 						</div>
-					</div>
 
-				{% endif %}
-			</div>
+					{% endif %}
+				</div>
+			{% else %}
+				<div class="c-project__item">
+
+					{% if block.type == 'projects' %}
+
+						{% set image = block.image.one() %}
+						<div class="c-project__content">
+							<div class="c-project__content-main-image-even">
+								{% if image %}
+									{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
+									<img src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
+								{% endif %}
+							</div>
+							<div class="c-project__content-supporting-even">
+								<div class="c-project__link c-project__link--even">
+									{% set url = block.projectLink.one() %}
+									{% if url %}
+										<a href="{{ url.url }}">{{ block.text }}</a>
+									{% endif %}
+								</div>
+								<div class="c-project__content-supporting-image-even">
+									{% set secondimage = block.secondaryImage.one() %}
+									{% if secondimage %}
+										{% set secondSrcset = craft.image.srcset(secondimage, [420,480,650,960]) %}
+										<img src="{{ secondimage.getUrl({width: 960}) }}" srcset="{{ secondSrcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ secondimage.alt }}">
+									{% endif %}
+								</div>
+								<div class="c-project__content-title c-project__content-title-even">
+									<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
+									<h3 class="h4 c-project__subtitle u-mb-6">{{ block.subtitle }}</h3>
+								</div>
+							</div>
+						</div>
+
+					{% endif %}
+				</div>
+
+			{% endif %}
 		{% endfor %}
 
 	</div>

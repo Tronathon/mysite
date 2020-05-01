@@ -1,4 +1,4 @@
-dateModified: 1587581677
+dateModified: 1588254465
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -523,6 +523,32 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      1485d371-722a-4cef-af28-fdf3bf89effc:
+        name: 'Secondary Image'
+        handle: secondaryImage
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: ''
+          defaultUploadLocationSource: 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:795e072f-98ce-4a14-ae63-4e3a4e5142ca'
+          singleUploadLocationSubpath: ''
+          restrictFiles: ''
+          allowedKinds: null
+          sources:
+            - 'volume:9e21bfc8-59c7-4a1e-9695-b710f984ea53'
+          source: null
+          targetSiteId: null
+          viewMode: large
+          limit: ''
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
     fieldLayouts:
       724e8887-ed70-4d73-8162-5e8ea58c9295:
         tabs:
@@ -545,6 +571,9 @@ matrixBlockTypes:
               6412fb71-d84e-4290-b519-0ae051ced9b3:
                 required: false
                 sortOrder: 5
+              1485d371-722a-4cef-af28-fdf3bf89effc:
+                required: false
+                sortOrder: 6
   e20f51ff-05c2-40fd-ba0a-1581d08c05ae:
     field: 4138491f-1d2f-498d-b54e-a145e38f55ac
     name: clients
