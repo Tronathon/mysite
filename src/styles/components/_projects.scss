@@ -1,17 +1,41 @@
 .c-project__items {
 	width: 100%;
-	max-width: 48rem;
-	margin: 0 auto;
+	max-width: 70rem;
+
+	@include media(l) {
+		margin: 0 rem(30);
+	}
 
 }
 
 .c-project__content {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
+
+	// @include media(l) {
+	// 	flex-direction: column;
+	// }
 }
 
-.c-project__content-left,
+.c-project__content--mobile {
+	flex-direction: column-reverse;
+	@include media(l) {
+		flex-direction: column;
+	}
+}
+
+.c-project__content-left {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	order: 1;
+
+	@include media(l) {
+		flex-direction: row;
+	}
+}
+
 .c-project__content-right {
 	display: flex;
 	flex-direction: row;
@@ -30,9 +54,13 @@
 	box-sizing: border-box;
 	border-left: 1px solid $white;
 	position: relative;
-	display: flex;
-	height: rem(320);
+	display: none;
+	height: 24rem;
 	margin-left: auto;
+
+	@include media(l) {
+		display: flex;
+	}
 }
 
 .c-project__content-supporting-image {
@@ -51,6 +79,7 @@
 .c-project__content-main-image {
 	@include ratio(2,1);
 	width: 100%;
+	margin-bottom: rem(10);
 
 	img {
 		@supports(object-fit: cover) {
@@ -60,12 +89,16 @@
 }
 
 .c-project__link {
-	transform-origin: 0 bottom;
-	transform: rotate(90deg);
-	display: flex;
-	// margin-top: rem(10);
-	margin-bottom: auto;
-	width: 50%;
+	display: block;
+	margin-bottom: rem(30);
+
+	@include media(l) {
+		transform-origin: 0 bottom;
+		transform: rotate(90deg);
+		display: flex;
+		margin-bottom: auto;
+		width: 50%;
+	}
 
 	a {
 		@include body();
@@ -82,14 +115,35 @@
 }
 
 .c-project__link--even {
-	margin-bottom: 0;
-	margin-top: rem(-100);
+	display: none;
+
+	@include media(l) {
+		display: flex;
+		margin-bottom: 0;
+		// margin-top: rem(-100);
+	}
+}
+
+.c-project__link--mobile {
+	display: block;
+	text-align: left;
+
+	@include media(l) {
+		display: none;
+	}
 }
 
 .c-project__content-main-image-even {
-	width: 90%;
+	width: 100%;
 	margin-right: auto;
-	@include ratio(3,2);
+	margin-bottom: rem(10);
+
+	@include ratio(2,1);
+
+	@include media(l) {
+		width: 90%;
+		margin-bottom: 0;
+	}
 
 	img {
 		@supports(object-fit: cover) {
@@ -104,24 +158,41 @@
 }
 
 .c-project__content-supporting-image-even {
-	width: 50%;
-	margin: rem(20);
-	@include ratio(2,1.35);
-	// width: 100%;
+	display: none;
+
+	@include media(l) {
+		width: 50%;
+		margin: rem(20);
+		@include ratio(2,1.35);
+	}
 }
 
 .c-project__content-title-even {
-	margin-top: rem(-85);
-	padding-bottom: 0;
-	z-index: 10;
+	@include media(l) {
+		margin-top: rem(-85);
+		padding-bottom: 0;
+		z-index: 10;
+	}
 }
 
 .c-project__content-title-even:after {
-	display: block;
-	height: rem(300);
-	content: '';
-	width: 50%;
-	margin-right: auto;
-	box-sizing: border-box;
-	border-right: 1px solid $white;
+	display: none;
+
+	@include media(l) {
+		display: block;
+		height: rem(300);
+		content: '';
+		width: 50%;
+		margin-right: auto;
+		box-sizing: border-box;
+		border-right: 1px solid $white;
+	}
+}
+
+.c-project__subtitle {
+	margin-bottom: rem(20);
+
+	@include media(l) {
+		margin-bottom: rem(60);
+	}
 }

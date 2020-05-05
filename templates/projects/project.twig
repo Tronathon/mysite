@@ -12,15 +12,16 @@
 					<div class="c-project__single-images">
 						<div class="c-project__single-desktop-image">
 							{% set image = entry.desktopImage.one() ?? null %}
-							{% set srcset = craft.image.srcset(image ?? null, [420,480,650,800]) %}
 							{% if image %}
+								{% set srcset = craft.image.srcset(image ?? null, [420,480,650,800]) %}
 								<img src="{{ image.getUrl({width: 800}) }}" srcset="{{ srcset }}" sizes="(min-width: 50em) 50vw, 100vw" alt="{{ image.alt }}">
 							{% endif %}
 						</div>
 						<div class="c-project__single-mobile-image">
 							{% set mobileImage = entry.mobileImage.one() ?? null %}
 							{% if mobileImage %}
-								<img src="{{ mobileImage.getUrl() }}">
+								{% set srcset = craft.image.srcset(mobileImage ?? null, [420,480,650,800]) %}
+								<img src="{{ mobileImage.getUrl({width: 800}) }}" srcset="{{ srcset }}" sizes="(min-width: 50em) 50vw, 100vw" alt="{{ mobileImage.alt }}">
 							{% endif %}
 						</div>
 					</div>

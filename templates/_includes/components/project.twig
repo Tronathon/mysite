@@ -1,7 +1,8 @@
 {% import '_includes/macros' as macros %}
 
-<section class="l-section" id="work">
-	<h2 class="h3">Selected works</h2>
+<section
+	class="l-section" id="work">
+	{# <h2 class="h3">Selected works</h2> #}
 	<div class="c-project__items">
 
 		{% for block in entry.projectGrid %}
@@ -17,7 +18,7 @@
 									<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
 									<h3 class="h4 c-project__subtitle u-mb-1">{{ block.subtitle }}</h3>
 								</div>
-								<div class="c-project__content-main-image u-mb-2">
+								<div class="c-project__content-main-image">
 									{% if image %}
 										{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
 										<img src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
@@ -52,7 +53,13 @@
 					{% if block.type == 'projects' %}
 
 						{% set image = block.image.one() %}
-						<div class="c-project__content">
+						<div class="c-project__content c-project__content--mobile">
+							<div class="c-project__link c-project__link--even c-project__link--mobile">
+								{% set url = block.projectLink.one() %}
+								{% if url %}
+									<a href="{{ url.url }}">{{ block.text }}</a>
+								{% endif %}
+							</div>
 							<div class="c-project__content-main-image-even">
 								{% if image %}
 									{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
@@ -75,7 +82,7 @@
 								</div>
 								<div class="c-project__content-title c-project__content-title-even">
 									<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
-									<h3 class="h4 c-project__subtitle u-mb-6">{{ block.subtitle }}</h3>
+									<h3 class="h4 c-project__subtitle">{{ block.subtitle }}</h3>
 								</div>
 							</div>
 						</div>
