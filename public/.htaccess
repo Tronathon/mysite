@@ -383,13 +383,13 @@ AddDefaultCharset utf-8
 #   RewriteCond %{REQUEST_URI} !^/$
 #   RewriteCond %{REQUEST_URI} !/admin/.*
 #   RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"' [OR]
-#   RewriteCond %{HTTP_HOST} !^www\.domain\.co\.uk [OR]
+#   RewriteCond %{HTTP_HOST} !^www\.anthony-mooney\.com [OR]
 #   RewriteCond %{REQUEST_URI} /$
-#   RewriteRule ^/?(.*[^/])?/?$ https://www.domain.co.uk/$1 [R=301,NC,L]
+#   RewriteRule ^/?(.*[^/])?/?$ https://www.anthony-mooney.com/$1 [R=301,NC,L]
 #
 #   RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"' [OR]
-#   RewriteCond %{HTTP_HOST} !^www\.domain\.co\.uk
-#   RewriteRule ^ https://www.domain.co.uk%{REQUEST_URI} [R=301,NC,L]
+#   RewriteCond %{HTTP_HOST} !^www\.anthony-mooney\.com
+#   RewriteRule ^ https://www.anthony-mooney.com%{REQUEST_URI} [R=301,NC,L]
 # </IfModule>
 
 
