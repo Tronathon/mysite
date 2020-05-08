@@ -83,22 +83,7 @@
 	// height: 240px;
 	position: relative;
 	margin: 0 auto;
-	// max-width: rem(160);
 }
-
-// .c-project__single-mobile-image:after {
-// 	display: block;
-// 	content: '';
-// 	border-radius: 50%;
-// 	// border: 1px solid $blue-overlay;
-// 	background: $blue-overlay;
-// 	position: absolute;
-// 	bottom: rem(10);
-// 	left: 50%;
-// 	transform: translate(-50%, 0);
-// 	height: rem(18);
-// 	width: rem(18);
-// }
 
 @include media(l) {
 	.c-project__single-items {

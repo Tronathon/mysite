@@ -9,13 +9,13 @@ const cookieName = 'fonts-loaded';
 const cookieClass = 'fonts-loaded';
 
 const typefaces = {
-	ReitamRegular: [
-		{ weight: 400, style: 'normal' },
-	],
 	Roboto: [
 		{ weight: 400, style: 'normal' },
 	],
 	Libre: [
+		{ weight: 400, style: 'normal' },
+	],
+	ReitamRegular: [
 		{ weight: 400, style: 'normal' },
 	],
 };
@@ -37,7 +37,7 @@ function loadFonts() {
 	Object.keys(typefaces).forEach(family => {
 		typefaces[family].map(variant => {
 			const loader = new FontFaceObserver(family, variant);
-			fonts.push(loader.load(null, 5000));
+			fonts.push(loader.load(null, 7000));
 		});
 	});
 
