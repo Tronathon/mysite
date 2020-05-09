@@ -28,13 +28,8 @@
 	@include body();
 }
 
-.c-sidenav__list__item:hover {
-	.c-sidenav__link:after{
-		display: inline-block;
-		border-bottom: 1px solid $white;
-		content: '';
-	}
-
+.c-sidenav__link:hover {
+	text-decoration: underline;
 }
 
 .c-sidenav__mobile {
