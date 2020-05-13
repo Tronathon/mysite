@@ -29,9 +29,6 @@ function mouseEnter(e) {
 	if (window.innerWidth > 800) {
 		mouse.classList.add('active');
 	}
-	// if (e.target != logo) {
-	// 	e.target.classList.add('active');
-	// }
 }
 
 function mouseLeave(e) {

@@ -3,5 +3,6 @@ import './modules/mouse';
 import './modules/scroll-nav';
 import './modules/mobile-nav';
 import './modules/rollingtext';
+import './modules/shadow';
 
 loadFonts();
