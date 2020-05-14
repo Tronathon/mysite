@@ -12,12 +12,12 @@ const typefaces = {
 	Roboto: [
 		{ weight: 400, style: 'normal' },
 	],
-	Libre: [
-		{ weight: 400, style: 'normal' },
-	],
-	ReitamRegular: [
-		{ weight: 400, style: 'normal' },
-	],
+	// Libre: [
+	// 	{ weight: 400, style: 'normal' },
+	// ],
+	// ReitamRegular: [
+	// 	{ weight: 400, style: 'normal' },
+	// ],
 };
 
 export default function init() {

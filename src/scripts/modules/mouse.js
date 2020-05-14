@@ -1,5 +1,6 @@
 const mouse = document.querySelector('.js-mouse');
 const links = Array.from(document.getElementsByTagName('a'));
+const sideNav = document.querySelectorAll('.js-nav');
 const inputs = Array.from(document.getElementsByTagName('input'));
 
 window.addEventListener('mousemove', cursorLoc);
@@ -33,6 +34,8 @@ function mouseEnter(e) {
 
 function mouseLeave(e) {
 	mouse.classList.remove('active');
-	e.target.style.color = '#fff';
+	if (!e.target == sideNav) {
+		e.target.style.color = '#fff';
+	}
 	e.target.classList.remove('active');
 }
