@@ -22,6 +22,8 @@
 
 .c-project__single-details-copy {
 	@include body-serif();
+	overflow: scroll;
+	height: rem(240);
 }
 
 .c-project__single-link {
@@ -103,14 +105,5 @@
 	.c-project__single-desktop-image {
 		width: 60%;
 		min-width: rem(250);
-	}
-
-	// .c-project__single-mobile-image {
-	// 	width: 24%;
-	// 	min-width: rem(150);
-	// }
-
-	.c-project__single-details-copy {
-		overflow: scroll;
 	}
 }
