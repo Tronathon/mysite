@@ -28,7 +28,8 @@
 	@include body();
 }
 
-.c-sidenav__link:hover {
+.c-sidenav__link:hover,
+.c-sidenav__link.is-active {
 	color: $pink;
 }
 
