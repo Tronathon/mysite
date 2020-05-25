@@ -1,22 +1,30 @@
 {% import '_includes/macros' as macros %}
 
 <section
-	class="l-section" id="work">
+	class="l-section l-section--works" id="work">
 	{# <h2 class="h3">Selected works</h2> #}
 	<div class="c-project__items">
 
 		{% for block in entry.projectGrid %}
-			{% if loop.index is odd %}
-				<div class="c-project__item">
+			<div class="c-project__item">
 
-					{% if block.type == 'projects' %}
+				{% if block.type == 'projects' %}
 
-						<div class="c-project__content-title">
-							<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
-							<h3 class="h4 c-project__subtitle">{{ block.subtitle }}</h3>
-						</div>
+					<div class="c-project__content-title">
+						<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
+						<h3 class="h4 c-project__subtitle">{{ block.subtitle }}</h3>
+					</div>
 
-						<div class="c-project__content-image">
+					<div class="c-project__content-image">
+						<div class="c-project__content-primary">
+
+							<div class="c-project__link">
+								{% set url = block.projectLink.one() %}
+								{% if url %}
+									<a href="{{ url.url }}">{{ block.text }}</a>
+								{% endif %}
+							</div>
+
 							<div class="c-project__content-main-image">
 								{% set image = block.image.one() %}
 								{% if image %}
@@ -25,12 +33,6 @@
 								{% endif %}
 							</div>
 
-							<div class="c-project__link">
-								{% set url = block.projectLink.one() %}
-								{% if url %}
-									<a href="{{ url.url }}">{{ block.text }}</a>
-								{% endif %}
-							</div>
 						</div>
 
 						<div class="c-project__content-supporting-image">
@@ -41,52 +43,12 @@
 							{% endif %}
 						</div>
 
-					{% endif %}
+					</div>
 
-				</div>
+				{% endif %}
 
+			</div>
 
-			{% else %}
-
-				<div class="c-project__item c-project__item--even">
-
-					{% if block.type == 'projects' %}
-
-						<div class="c-project__content-title">
-							<h2 class="h3 c-project__title u-mb-1">{{ block.projectTitle }}</h2>
-							<h3 class="h4 c-project__subtitle">{{ block.subtitle }}</h3>
-						</div>
-
-						<div class="c-project__content-image c-project__content-image--even">
-							<div class="c-project__content-main-image">
-								{% set image = block.image.one() %}
-								{% if image %}
-									{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
-									<img src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
-								{% endif %}
-							</div>
-
-							<div class="c-project__link">
-								{% set url = block.projectLink.one() %}
-								{% if url %}
-									<a href="{{ url.url }}">{{ block.text }}</a>
-								{% endif %}
-							</div>
-						</div>
-
-						<div class="c-project__content-supporting-image">
-							{% set secondimage = block.secondaryImage.one() %}
-							{% if secondimage %}
-								{% set secondSrcset = craft.image.srcset(secondimage, [420,480,650,960]) %}
-								<img src="{{ secondimage.getUrl({width: 960}) }}" srcset="{{ secondSrcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ secondimage.alt }}">
-							{% endif %}
-						</div>
-
-					{% endif %}
-
-				</div>
-
-			{% endif %}
 		{% endfor %}
 
 	</div>
