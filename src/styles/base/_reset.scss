@@ -27,6 +27,9 @@ body {
 	color: $body-color; /* 1 */
 }
 
+main {
+	margin-top: rem(30);
+}
 /**
  * Reset typographic elements
  */
