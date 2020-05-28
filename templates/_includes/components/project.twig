@@ -29,7 +29,7 @@
 								{% set image = block.image.one() %}
 								{% if image %}
 									{% set srcset = craft.image.srcset(image, [420,480,650,960]) %}
-									<img src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
+									<img class="js-matrix" src="{{ image.getUrl({width: 960}) }}" srcset="{{ srcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ image.alt }}">
 								{% endif %}
 							</div>
 
@@ -39,7 +39,7 @@
 							{% set secondimage = block.secondaryImage.one() %}
 							{% if secondimage %}
 								{% set secondSrcset = craft.image.srcset(secondimage, [420,480,650,960]) %}
-								<img src="{{ secondimage.getUrl({width: 960}) }}" srcset="{{ secondSrcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ secondimage.alt }}">
+								<img class="js-matrix" src="{{ secondimage.getUrl({width: 960}) }}" srcset="{{ secondSrcset }}" sizes="(min-width: 80em) 50vw, 100vw" alt="{{ secondimage.alt }}">
 							{% endif %}
 						</div>
 
