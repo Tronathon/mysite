@@ -1,4 +1,4 @@
-dateModified: 1588254465
+dateModified: 1590861511
 email:
   fromEmail: webdev@nixondesign.com
   fromName: Craft
@@ -150,7 +150,7 @@ fields:
       source: null
       targetSiteId: null
       viewMode: large
-      limit: '1'
+      limit: '3'
       selectionLabel: ''
       localizeRelations: false
     contentColumnType: string

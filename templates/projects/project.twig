@@ -10,20 +10,15 @@
 			<section class="l-section" id="project">
 				<article class="c-project__single-items">
 					<div class="c-project__single-images">
-						<div class="c-project__single-desktop-image">
-							{% set image = entry.desktopImage.one() ?? null %}
-							{% if image %}
-								{% set srcset = craft.image.srcset(image ?? null, [420,480,650,800]) %}
-								<img src="{{ image.getUrl({width: 800}) }}" srcset="{{ srcset }}" sizes="(min-width: 50em) 50vw, 100vw" alt="{{ image.alt }}">
-							{% endif %}
-						</div>
-						<div class="c-project__single-mobile-image">
-							{% set mobileImage = entry.mobileImage.one() ?? null %}
-							{% if mobileImage %}
-								{% set srcset = craft.image.srcset(mobileImage ?? null, [420,480,650,800]) %}
-								<img src="{{ mobileImage.getUrl({width: 800}) }}" srcset="{{ srcset }}" sizes="(min-width: 50em) 50vw, 100vw" alt="{{ mobileImage.alt }}">
-							{% endif %}
-						</div>
+						{% set images = entry.desktopImage.all() ?? null %}
+						{% if images %}
+							{% for image in images %}
+								<div class="c-project__single-desktop-image u-mb-2">
+									{% set srcset = craft.image.srcset(image ?? null, [420,480,650,800]) %}
+									<img src="{{ image.getUrl({width: 800}) }}" srcset="{{ srcset }}" sizes="(min-width: 50em) 50vw, 100vw" alt="{{ image.alt }}">
+								</div>
+							{% endfor %}
+						{% endif %}
 					</div>
 					<div class="c-project__single-details">
 						<h2 class="h3 u-mb-1">{{ entry.projectTitle }}</h2>
