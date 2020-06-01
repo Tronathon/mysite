@@ -26,7 +26,7 @@
 	width: 35%;
 
 	@include media(l) {
-		width: 22%;
+		width: 37.5%;
 		margin-right: rem(40);
 	}
 }
@@ -71,7 +71,7 @@
 
 	@include media(l) {
 		flex-direction: column;
-		width: 75%;
+		width: 65%;
 	}
 }
 
